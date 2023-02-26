@@ -11,5 +11,5 @@ export class AppComponent {
     'a Web Developer',
     'a FOSS Advocate',
     'a ML Enthusiast'
-  ]
+  ];
 }
