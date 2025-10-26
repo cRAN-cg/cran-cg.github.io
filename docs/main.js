@@ -60,11 +60,11 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var routes = [
     {
         path: '',
-        redirectTo: '/sakshi-weds-chiranjeev',
+        redirectTo: '/wedding',
         pathMatch: 'full'
     },
     {
-        path: 'sakshi-weds-chiranjeev',
+        path: 'wedding',
         loadChildren: './wedding/wedding.module#WeddingModule'
     },
     {
