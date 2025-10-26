@@ -1,0 +1,66 @@
+.ceremony-content {
+  padding: 20px;
+}
+
+.ceremony-content h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.event-details {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.detail-card {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.detail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.detail-card i {
+  font-size: 2.5em;
+  color: #667eea;
+  margin-bottom: 15px;
+}
+
+.detail-card h3 {
+  font-size: 1.3em;
+  margin: 15px 0 10px 0;
+  color: #333;
+}
+
+.detail-card p {
+  color: #666;
+  font-size: 1.1em;
+}
+
+.description {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .event-details {
+    flex-direction: column;
+  }
+}
