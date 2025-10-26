@@ -539,7 +539,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/chiranjeevgupta/Desktop/projects/blog/cran-cg.github.io/my-homepage/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /home/user/cran-cg.github.io/my-homepage/src/styles.css */"./src/styles.css");
 
 
 /***/ })

@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
       <button (click)="goHome()">Go Back Home</button>
     </div>
   `,
-  styles: [``
+  styles: [`
     .not-found-container {
       text-align: center;
       padding: 50px 20px;
