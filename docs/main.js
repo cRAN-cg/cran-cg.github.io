@@ -48,6 +48,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _not_found_not_found_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./not-found/not-found.component */ "./src/app/not-found/not-found.component.ts");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -57,10 +58,11 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var routes = [
     {
         path: '',
-        redirectTo: '/wedding',
+        component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"],
         pathMatch: 'full'
     },
     {
@@ -170,12 +172,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _not_found_not_found_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./not-found/not-found.component */ "./src/app/not-found/not-found.component.ts");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -188,7 +192,8 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
-                _not_found_not_found_component__WEBPACK_IMPORTED_MODULE_4__["NotFoundComponent"]
+                _not_found_not_found_component__WEBPACK_IMPORTED_MODULE_4__["NotFoundComponent"],
+                _home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -199,6 +204,70 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/home/home.component.css":
+/*!*****************************************!*\
+  !*** ./src/app/home/home.component.css ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n  .content {\n    display: flex;\n    font-family: 'Lato', sans-serif;\n    font-size: 35px;\n    line-height: 45px;\n    color: #ecf0f1;\n    flex-direction: column;\n  }\n  .content__wrapper {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 85%;\n  }\n  .content__container {\n    font-weight: 600;\n    overflow: hidden;\n    height: 45px;\n    padding: 0 40px;\n    display: flex;\n  }\n  .content__container::before {\n    content: '<';\n    left: 0;\n  }\n  .content__container::after {\n    content: ' />';\n    white-space: pre;\n  }\n  .content__container:after, .content__container:before {\n    color: #16a085;\n    font-size: 42px;\n    line-height: 45px;\n    -webkit-animation-name: opacity;\n            animation-name: opacity;\n    -webkit-animation-duration: 3s;\n            animation-duration: 3s;\n    -webkit-animation-iteration-count: infinite;\n            animation-iteration-count: infinite;\n  }\n  .content__container__text {\n\n  }\n  .content__container__list {\n    all: unset;\n    list-style: none;\n    text-align: left;\n    height: 180px;\n    margin-left: 8px;\n    -webkit-animation-name: change;\n            animation-name: change;\n    -webkit-animation-duration: 24s;\n            animation-duration: 24s;\n    -webkit-animation-iteration-count: infinite;\n            animation-iteration-count: infinite;\n  }\n  .content__container__list__item {\n    line-height: 45px;\n    margin: 0;\n  }\n  .social-links {\n    display: flex;\n    flex-direction: row;\n    margin-top: 15%;\n    justify-content: space-evenly\n  }\n  .footer {\n    position: absolute;\n    top: calc(60% + 160px);\n    width: 100%;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    font-family: 'Lato', sans-serif;\n  }\n  a:link {\n    color: black;\n}\n  a:hover {\n  color: white;\n}\n  a:visited {\n  color: black;\n}\n  a:visited:hover {\n  color: grey;\n}\n  @-webkit-keyframes opacity {\n\n    12.5%, 25%, 75%, 87.5%, 37.5%, 62.5%, 50% {\n      opacity: 0;\n    }\n}\n  @keyframes opacity {\n\n    12.5%, 25%, 75%, 87.5%, 37.5%, 62.5%, 50% {\n      opacity: 0;\n    }\n}\n  @-webkit-keyframes change {\n\n    12.5%, 87.5% {\n      -webkit-transform: translateY(0);\n              transform: translateY(0)\n    }\n    25%, 75% {\n      -webkit-transform: translateY(-25%);\n              transform: translateY(-25%);\n    }\n    37.5%, 62.5% {\n      -webkit-transform: translateY(-50%);\n              transform: translateY(-50%);\n    }\n    50% {\n      -webkit-transform: translateY(-75%);\n              transform: translateY(-75%);\n    }\n\n  }\n  @keyframes change {\n\n    12.5%, 87.5% {\n      -webkit-transform: translateY(0);\n              transform: translateY(0)\n    }\n    25%, 75% {\n      -webkit-transform: translateY(-25%);\n              transform: translateY(-25%);\n    }\n    37.5%, 62.5% {\n      -webkit-transform: translateY(-50%);\n              transform: translateY(-50%);\n    }\n    50% {\n      -webkit-transform: translateY(-75%);\n              transform: translateY(-75%);\n    }\n\n  }\n"
+
+/***/ }),
+
+/***/ "./src/app/home/home.component.html":
+/*!******************************************!*\
+  !*** ./src/app/home/home.component.html ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div class=\"content__wrapper\">\n  <div class=\"content\">\n    <div class=\"content__container\">\n      <span class=\"content__container__text\">\n        Hi I am\n      </span>\n\n      <ul class=\"content__container__list\">\n        <li class=\"content__container__list__item\" *ngFor=\"let contentItem of contentList\">\n          {{contentItem}}</li>\n        </ul>\n  </div>\n  <div class=\"social-links\">\n    <a href=\"mailto:guptachiranjeev.13@gmail.com\" title=\"guptachiranjeev.13@gmail.com\" target=\"_blank\">\n      <i class=\"fas fa-envelope\"></i>\n    </a>\n    <a href=\"https://www.linkedin.com/in/chiranjeev-gupta/\" title=\"linkedin.com/in/chiranjeev-gupta\" target=\"_blank\">\n      <i class=\"fab fa-linkedin-in\"></i>\n    </a>\n    <a href=\"https://www.facebook.com/cran.cg/\" title=\"facebook.com/cran.cg\" target=\"_blank\">\n      <i class=\"fab fa-facebook\"></i>\n    </a>\n    <a href=\"https://www.twitter.com/cran_cg/\" title=\"twitter.com/cran_cg\" target=\"_blank\">\n      <i class=\"fab fa-twitter\"></i>\n    </a>\n    <a href=\"https://www.github.com/cran-cg/\" title=\"github.com/cran-cg\" target=\"_blank\">\n      <i class=\"fab fa-github\"></i>\n    </a>\n  </div>\n</div>\n<div class=\"footer\">\n    <p>Made with <i class=\"fas fa-heart red\"></i> + <i class=\"fab fa-angular\"></i> in India</p>\n</div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/home/home.component.ts":
+/*!****************************************!*\
+  !*** ./src/app/home/home.component.ts ***!
+  \****************************************/
+/*! exports provided: HomeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var HomeComponent = /** @class */ (function () {
+    function HomeComponent() {
+        this.contentList = ['Chiranjeev Gupta.', 'a Full Stack Developer.', 'an Explorer.', 'a Foodie.'];
+    }
+    HomeComponent.prototype.ngOnInit = function () {
+    };
+    HomeComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-home',
+            template: __webpack_require__(/*! ./home.component.html */ "./src/app/home/home.component.html"),
+            styles: [__webpack_require__(/*! ./home.component.css */ "./src/app/home/home.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], HomeComponent);
+    return HomeComponent;
 }());
 
 
