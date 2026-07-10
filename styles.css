@@ -1,0 +1,193 @@
+/* Chiranjeev Gupta — portfolio
+   Ink-blue ground, saffron accent, system mono as the display voice. */
+
+:root {
+  --ink: #10141d;
+  --panel: #161c28;
+  --fog: #aab4c4;
+  --bright: #e8edf4;
+  --saffron: #e8a13c;
+  --saffron-soft: rgba(232, 161, 60, 0.14);
+  --rule: rgba(170, 180, 196, 0.18);
+
+  --mono: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --ink: #f7f5f0;
+    --panel: #efece4;
+    --fog: #4c5668;
+    --bright: #1d2634;
+    --saffron: #b97718;
+    --saffron-soft: rgba(185, 119, 24, 0.12);
+    --rule: rgba(76, 86, 104, 0.22);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { height: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--ink);
+  color: var(--fog);
+  font-family: var(--sans);
+  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 clamp(20px, 6vw, 48px);
+}
+
+main {
+  width: 100%;
+  max-width: 680px;
+  flex: 1;
+}
+
+/* ---- hero ---- */
+
+.hero {
+  min-height: 72vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 96px 0 48px;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  color: var(--saffron);
+  margin: 0 0 12px;
+}
+
+.typed-line {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: clamp(1.6rem, 1rem + 3.6vw, 2.9rem);
+  line-height: 1.25;
+  color: var(--bright);
+  margin: 0;
+  min-height: 2.5em; /* room for two wrapped lines: no layout shift while typing */
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.05em;
+  margin-left: 0.12em;
+  vertical-align: text-bottom;
+  background: var(--saffron);
+  animation: blink 1.1s steps(1) infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+.intro {
+  max-width: 58ch;
+  margin: 28px 0 0;
+}
+
+/* ---- profile links ---- */
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  margin-top: 36px;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--fog);
+  text-decoration: none;
+  padding: 6px 10px;
+  margin: -6px -10px;
+  border-radius: 4px;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.links a:hover { color: var(--saffron); background: var(--saffron-soft); }
+
+.links a:focus-visible,
+.project dt a:focus-visible {
+  outline: 2px solid var(--saffron);
+  outline-offset: 3px;
+}
+
+.links svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+}
+
+/* ---- sections ---- */
+
+section { padding: 40px 0; }
+
+section + section { border-top: 1px solid var(--rule); }
+
+.projects {
+  margin: 28px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.project dt {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--bright);
+  margin: 0;
+}
+
+.project dt a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--saffron);
+  transition: color 160ms ease;
+}
+
+.project dt a:hover { color: var(--saffron); }
+
+.project dd {
+  margin: 8px 0 0;
+  max-width: 62ch;
+}
+
+/* ---- footer ---- */
+
+footer {
+  width: 100%;
+  max-width: 680px;
+  padding: 36px 0 44px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+
+footer p { margin: 0; }
+
+.heart { color: var(--saffron); }
+
+/* ---- motion preferences ---- */
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor { animation: none; }
+}

@@ -1,15 +1,97 @@
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
-
-
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chiranjeev Gupta — software engineer</title>
+  <meta name="description" content="Software engineer in India building agent-native developer tools — browser cloud dev environments, peer-to-peer streaming, and interfaces for working AI agents.">
+  <meta property="og:title" content="Chiranjeev Gupta — software engineer">
+  <meta property="og:description" content="Building agent-native developer tools: cloud dev environments, P2P streaming meshes, and interfaces for working AI agents.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cran-cg.github.io/">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <app-root></app-root>
-<script type="text/javascript" src="docs/runtime.js"></script><script type="text/javascript" src="docs/polyfills.js"></script><script type="text/javascript" src="docs/styles.js"></script><script type="text/javascript" src="docs/vendor.js"></script><script type="text/javascript" src="docs/main.js"></script></body>
+  <main>
+    <section class="hero" aria-label="Introduction">
+      <p class="eyebrow">hi, i am</p>
+      <h1 class="typed-line">
+        <span id="typed">Chiranjeev Gupta.</span><span class="cursor" aria-hidden="true"></span>
+      </h1>
+      <p class="intro">
+        I build infrastructure for how software gets written next &mdash;
+        browser-based dev environments, real-time peer-to-peer systems, and
+        interfaces that let AI agents do real work.
+      </p>
+      <nav class="links" aria-label="Profiles">
+        <a href="mailto:guptachiranjeev.13@gmail.com" title="Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.2.5L12 12.3 19.8 6H4.2ZM20 7.9l-7.4 6a1 1 0 0 1-1.2 0L4 7.9V18h16V7.9Z"/></svg>
+          <span>email</span>
+        </a>
+        <a href="https://www.github.com/cRAN-cg/" rel="noopener noreferrer" title="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          <span>github</span>
+        </a>
+        <a href="https://www.linkedin.com/in/chiranjeev-gupta/" rel="noopener noreferrer" title="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1-.02 5 2.5 2.5 0 0 1 .02-5ZM3 9h4v12H3V9Zm6.5 0H13v1.7h.05c.49-.9 1.7-1.85 3.5-1.85 3.74 0 4.43 2.4 4.43 5.5V21h-4v-5.8c0-1.38-.03-3.16-1.97-3.16-1.97 0-2.27 1.5-2.27 3.06V21h-4V9Z"/></svg>
+          <span>linkedin</span>
+        </a>
+        <a href="https://www.twitter.com/cran_cg/" rel="noopener noreferrer" title="X (Twitter)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.7 3h3.1l-6.8 7.8L22 21h-6.3l-4.9-6.4L5.2 21H2.1l7.3-8.3L2 3h6.4l4.5 5.9L17.7 3Zm-1.1 16.1h1.7L7.5 4.8H5.7l10.9 14.3Z"/></svg>
+          <span>x</span>
+        </a>
+      </nav>
+    </section>
 
+    <section aria-labelledby="building">
+      <h2 class="eyebrow" id="building">// now building</h2>
+      <dl class="projects">
+        <div class="project">
+          <dt><a href="https://shram.sunj.dev" rel="noopener noreferrer">shram</a></dt>
+          <dd>
+            Browser-based cloud dev environments &mdash; a GitHub repo becomes a
+            live IDE with an AI agent and hot-reload preview in seconds.
+            Go control plane, managed sandboxes, one URL.
+          </dd>
+        </div>
+        <div class="project">
+          <dt>swarmcast</dt>
+          <dd>
+            Real-time media streaming over a peer-to-peer mesh, built on the
+            P2PSP protocol &mdash; every viewer is also a relay.
+          </dd>
+        </div>
+        <div class="project">
+          <dt>ilc</dt>
+          <dd>
+            The anti-CLI: a mobile-first interface for talking to working AI
+            agents &mdash; watch, replay, and steer long-running sessions from
+            anywhere.
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <section aria-labelledby="elsewhere">
+      <h2 class="eyebrow" id="elsewhere">// elsewhere</h2>
+      <dl class="projects">
+        <div class="project">
+          <dt><a href="https://github.com/cRAN-cg/editor" rel="noopener noreferrer">editor</a></dt>
+          <dd>Monaco editor bindings for Angular.</dd>
+        </div>
+        <div class="project">
+          <dt><a href="https://github.com/cRAN-cg" rel="noopener noreferrer">github/cRAN-cg</a></dt>
+          <dd>Everything else, in various states of ambition.</dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with <span class="heart" aria-label="love">&#9829;</span> in India &mdash; no framework this time.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
 </html>
